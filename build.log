@@ -1,0 +1,896 @@
+╔══════════════════════════════════════╗
+║  FFmpegBuild: FFmpeg + dav1d (AV1)  ║
+║  VideoToolbox HW + Metal ready      ║
+║  Linkage: dynamic                     ║
+╚══════════════════════════════════════╝
+→ Cloning FFmpeg n8.1.3...
+Cloning into '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/ffmpeg-src'...
+warning: refs/tags/n8.1.3 23151b11c75aa44d9ab8db796a53c76acf00f6c0 is not a commit!
+Note: switching to '1041abdc962f4cc4f394aa8de9dc5236c0c3b9e7'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+Updating files:  97% (9896/10140)Updating files:  98% (9938/10140)Updating files:  99% (10039/10140)Updating files: 100% (10140/10140)Updating files: 100% (10140/10140), done.
+→ Patching FFmpeg: balance autoreleased Metal objects in yadif_videotoolbox
+→ Patching FFmpeg: close the predecessor cue on a missing pgssub palette (AetherEngine #142)
+→ Patching FFmpeg: skip the OpenGL ES buffer attribute on visionOS
+→ Patching FFmpeg: warn on matroska TrackTimestampScale != 1 (AetherEngine #145)
+→ Patching FFmpeg: seed the VC-1 parse context from extradata (AetherEngine #490)
+→ Patching FFmpeg: accept the dav1 sample entry for AV1 Dolby Vision (AetherEngine #547)
+→ Patching FFmpeg: probe the content of a PID labelled MPEG-1 audio (AetherEngine #641)
+→ Patching FFmpeg: dec3 chan_loc from a dependent substream's chanmap (upstream f10fdd6310, AetherEngine #728)
+→ Patching FFmpeg: dec3 keeps the JOC extension of a dependent substream (AetherEngine #728)
+→ Patching FFmpeg: a queued packet behind the written samples does not end a fragment's track
+→ Patching FFmpeg: decode the DTS:X height channels, standard and alternate presentations (AetherEngine #798)
+→ Patching FFmpeg: AV1 full-refresh Delayed Random Access Points are keyframes (AetherEngine #931)
+→ Patching FFmpeg: matroska skip_attachments option (AetherEngine #956)
+→ Patching FFmpeg: matroska forgets end of stream after a byte seek (AetherEngine #944)
+→ Cloning dav1d 1.5.4...
+Cloning into '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-src'...
+warning: refs/tags/1.5.4 191bdda98ec3c68137754dc97da1db34043d7cd4 is not a commit!
+Note: switching to '54706fc6bc0cdecab7e9593974a4039cc038fca7'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+→ Cloning zimg release-3.0.6...
+Cloning into '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src'...
+warning: refs/tags/release-3.0.6 ef19c4adcfda6e8b4af57aa9dc640e48f6306c35 is not a commit!
+Note: switching to 'f819b14e8f39d1282400b0d9543e8ef73c1b2bbd'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+Submodule 'test/extra/googletest' (https://github.com/google/googletest.git) registered for path 'test/extra/googletest'
+Cloning into '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/test/extra/googletest'...
+Submodule path 'test/extra/googletest': checked out '703bd9caab50b139428cea1aaff9974ebee5742e'
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: no obvious need to run autopoint
+autoreconf: running: aclocal --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: running: glibtoolize --copy --force
+glibtoolize: putting auxiliary files in '.'.
+glibtoolize: copying file './ltmain.sh'
+glibtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+glibtoolize: copying file 'm4/libtool.m4'
+glibtoolize: copying file 'm4/ltoptions.m4'
+glibtoolize: copying file 'm4/ltsugar.m4'
+glibtoolize: copying file 'm4/ltversion.m4'
+glibtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: configure.ac: no need to run autopoint (confirmed)
+autoreconf: running: aclocal --force -I m4
+autoreconf: running: /opt/homebrew/Cellar/autoconf/2.73/bin/autoconf --force
+configure.ac:36: warning: $as_echo is obsolete; use AS_ECHO(["message"]) instead
+lib/m4sugar/m4sh.m4:961: _as_echo_var_prepare is expanded from...
+lib/m4sugar/m4sh.m4:951: as_echo is expanded from...
+lib/m4sugar/m4sh.m4:689: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:696: AS_IF is expanded from...
+./lib/autoconf/general.m4:2305: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2326: AC_CACHE_CHECK is expanded from...
+m4/ax_pthread.m4:88: AX_PTHREAD is expanded from...
+configure.ac:36: the top level
+autoreconf: configure.ac: not running autoheader: no config headers
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:10: installing './compile'
+configure.ac:10: installing './config.guess'
+configure.ac:10: installing './config.sub'
+configure.ac:7: installing './install-sh'
+configure.ac:7: installing './missing'
+Makefile.am: installing './depcomp'
+parallel-tests: installing './test-driver'
+autoreconf: './config.sub' is updated
+autoreconf: './config.guess' is updated
+autoreconf: configure.ac: not running make: --make not given
+autoreconf: Leaving directory '.'
+→ Cloning zvbi v0.2.46...
+Cloning into '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-src'...
+warning: refs/tags/v0.2.46 3c5df8e0de773220361a541f4d29e4f0171ff469 is not a commit!
+Note: switching to '34bb6f660c5c1bacd4a66cc7b22311e4ca3c1ab5'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+ checking for automake >= 1.11.2...
+   testing automake...  found 1.18.1
+ checking for autoreconf >= 2.53...
+   testing autoreconf...  found 2.73
+ Processing ./configure.ac
+  Running autoreconf...
+ autoreconf: export WARNINGS=no-portability
+autoreconf: Entering directory '.'
+autoreconf: running: autopoint --force
+Copying file m4/gettext.m4
+Copying file m4/host-cpu-c-abi.m4
+Copying file m4/iconv.m4
+Copying file m4/intlmacosx.m4
+Copying file m4/lib-ld.m4
+Copying file m4/lib-link.m4
+Copying file m4/lib-prefix.m4
+Copying file m4/nls.m4
+Copying file m4/po.m4
+Copying file m4/progtest.m4
+Copying file po/Makevars.template
+autoreconf: running: aclocal --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: running: glibtoolize --copy --force
+glibtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'build-aux'.
+glibtoolize: copying file 'build-aux/ltmain.sh'
+glibtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+glibtoolize: copying file 'm4/libtool.m4'
+glibtoolize: copying file 'm4/ltoptions.m4'
+glibtoolize: copying file 'm4/ltsugar.m4'
+glibtoolize: copying file 'm4/ltversion.m4'
+glibtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: configure.ac: not running autopoint a second time
+autoreconf: running: aclocal --force -I m4
+autoreconf: running: /opt/homebrew/Cellar/autoconf/2.73/bin/autoconf --force
+autoreconf: running: /opt/homebrew/Cellar/autoconf/2.73/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:29: installing 'build-aux/compile'
+configure.ac:98: installing 'build-aux/config.guess'
+configure.ac:98: installing 'build-aux/config.sub'
+configure.ac:13: installing 'build-aux/install-sh'
+configure.ac:13: installing 'build-aux/missing'
+Makefile.am: installing './INSTALL'
+Makefile.am: installing './COPYING' using GNU General Public License v3 file
+Makefile.am:     Consider adding the COPYING file to the version control system
+Makefile.am:     for your code, to avoid questions about which license your project uses
+contrib/Makefile.am: installing 'build-aux/depcomp'
+parallel-tests: installing 'build-aux/test-driver'
+autoreconf: 'build-aux/config.sub' is updated
+autoreconf: 'build-aux/config.guess' is updated
+autoreconf: configure.ac: not running make: --make not given
+autoreconf: Leaving directory '.'
+Now type `./configure` to generate Makefiles.
+→ Patching zvbi: dropping GPL sources (packet-830.c, pdc.c, exp-vtx.c)
+ checking for automake >= 1.11.2...
+   testing automake...  found 1.18.1
+ checking for autoreconf >= 2.53...
+   testing autoreconf...  found 2.73
+ Processing ./configure.ac
+  Running autoreconf...
+ autoreconf: export WARNINGS=no-portability
+autoreconf: Entering directory '.'
+autoreconf: running: autopoint --force
+autoreconf: running: aclocal --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: running: glibtoolize --copy --force
+glibtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'build-aux'.
+glibtoolize: copying file 'build-aux/ltmain.sh'
+glibtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+glibtoolize: copying file 'm4/libtool.m4'
+glibtoolize: copying file 'm4/ltoptions.m4'
+glibtoolize: copying file 'm4/ltsugar.m4'
+glibtoolize: copying file 'm4/ltversion.m4'
+glibtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: configure.ac: not running autopoint a second time
+autoreconf: running: aclocal --force -I m4
+autoreconf: running: /opt/homebrew/Cellar/autoconf/2.73/bin/autoconf --force
+autoreconf: running: /opt/homebrew/Cellar/autoconf/2.73/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:29: installing 'build-aux/compile'
+configure.ac:13: installing 'build-aux/missing'
+contrib/Makefile.am: installing 'build-aux/depcomp'
+autoreconf: 'build-aux/config.sub' is updated
+autoreconf: 'build-aux/config.guess' is updated
+autoreconf: configure.ac: not running make: --make not given
+autoreconf: Leaving directory '.'
+Now type `./configure` to generate Makefiles.
+→ Build inputs recorded in build/build-inputs.txt
+
+━━━ Building dav1d: ios-arm64 (arm64 for iphoneos) ━━━
+    enable_tests   : false
+    enable_tools   : false
+    prefix         : /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/ios-arm64
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+[71/73] Compiling C object src/libdav1d.7.dylib.p/arm_64_mc16.S.o
+[72/73] Compiling C object src/libdav1d.7.dylib.p/decode.c.o
+[73/73] Linking target src/libdav1d.7.dylib
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-src/include/dav1d/version.h to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/ios-arm64/include/dav1d
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/ios-arm64/meson-private/dav1d.pc to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/ios-arm64/lib/pkgconfig
+Installing symlink pointing to libdav1d.7.dylib to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/ios-arm64/lib/libdav1d.dylib
+✓ dav1d ios-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/ios-arm64
+
+━━━ Building dav1d: isimulator-arm64 (arm64 for iphonesimulator) ━━━
+    enable_tests   : false
+    enable_tools   : false
+    prefix         : /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/isimulator-arm64
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+[71/73] Compiling C object src/libdav1d.7.dylib.p/arm_64_mc16.S.o
+[72/73] Compiling C object src/libdav1d.7.dylib.p/decode.c.o
+[73/73] Linking target src/libdav1d.7.dylib
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-src/include/dav1d/version.h to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/isimulator-arm64/include/dav1d
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/isimulator-arm64/meson-private/dav1d.pc to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/isimulator-arm64/lib/pkgconfig
+Installing symlink pointing to libdav1d.7.dylib to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/isimulator-arm64/lib/libdav1d.dylib
+✓ dav1d isimulator-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/isimulator-arm64
+
+━━━ Building dav1d: isimulator-x86_64 (x86_64 for iphonesimulator) ━━━
+    enable_tests   : false
+    enable_tools   : false
+    prefix         : /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/isimulator-x86_64
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ld: warning: no platform load command found in '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/isimulator-x86_64/src/libdav1d.7.dylib.p/loopfilter16_sse.obj', assuming: iOS-simulator
+ld: warning: no platform load command found in '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/isimulator-x86_64/src/libdav1d.7.dylib.p/looprestoration16_sse.obj', assuming: iOS-simulator
+ld: warning: no platform load command found in '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/isimulator-x86_64/src/libdav1d.7.dylib.p/mc16_sse.obj', assuming: iOS-simulator
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-src/include/dav1d/version.h to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/isimulator-x86_64/include/dav1d
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/isimulator-x86_64/meson-private/dav1d.pc to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/isimulator-x86_64/lib/pkgconfig
+Installing symlink pointing to libdav1d.7.dylib to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/isimulator-x86_64/lib/libdav1d.dylib
+✓ dav1d isimulator-x86_64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/isimulator-x86_64
+
+━━━ Building dav1d: tvos-arm64 (arm64 for appletvos) ━━━
+    enable_tests   : false
+    enable_tools   : false
+    prefix         : /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/tvos-arm64
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+[71/73] Compiling C object src/libdav1d.7.dylib.p/arm_64_mc16.S.o
+[72/73] Compiling C object src/libdav1d.7.dylib.p/decode.c.o
+[73/73] Linking target src/libdav1d.7.dylib
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-src/include/dav1d/version.h to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/tvos-arm64/include/dav1d
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/tvos-arm64/meson-private/dav1d.pc to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/tvos-arm64/lib/pkgconfig
+Installing symlink pointing to libdav1d.7.dylib to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/tvos-arm64/lib/libdav1d.dylib
+✓ dav1d tvos-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/tvos-arm64
+
+━━━ Building dav1d: tvsimulator-arm64 (arm64 for appletvsimulator) ━━━
+    enable_tests   : false
+    enable_tools   : false
+    prefix         : /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/tvsimulator-arm64
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+[71/73] Compiling C object src/libdav1d.7.dylib.p/arm_64_mc16.S.o
+[72/73] Compiling C object src/libdav1d.7.dylib.p/decode.c.o
+[73/73] Linking target src/libdav1d.7.dylib
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-src/include/dav1d/version.h to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/tvsimulator-arm64/include/dav1d
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/tvsimulator-arm64/meson-private/dav1d.pc to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/tvsimulator-arm64/lib/pkgconfig
+Installing symlink pointing to libdav1d.7.dylib to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/tvsimulator-arm64/lib/libdav1d.dylib
+✓ dav1d tvsimulator-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/tvsimulator-arm64
+
+━━━ Building dav1d: tvsimulator-x86_64 (x86_64 for appletvsimulator) ━━━
+    enable_tests   : false
+    enable_tools   : false
+    prefix         : /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/tvsimulator-x86_64
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ld: warning: no platform load command found in '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/tvsimulator-x86_64/src/libdav1d.7.dylib.p/loopfilter16_sse.obj', assuming: tvOS-simulator
+ld: warning: no platform load command found in '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/tvsimulator-x86_64/src/libdav1d.7.dylib.p/looprestoration16_sse.obj', assuming: tvOS-simulator
+ld: warning: no platform load command found in '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/tvsimulator-x86_64/src/libdav1d.7.dylib.p/mc16_sse.obj', assuming: tvOS-simulator
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-src/include/dav1d/version.h to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/tvsimulator-x86_64/include/dav1d
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/tvsimulator-x86_64/meson-private/dav1d.pc to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/tvsimulator-x86_64/lib/pkgconfig
+Installing symlink pointing to libdav1d.7.dylib to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/tvsimulator-x86_64/lib/libdav1d.dylib
+✓ dav1d tvsimulator-x86_64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/tvsimulator-x86_64
+
+━━━ Building dav1d: xros-arm64 (arm64 for xros) ━━━
+    enable_tests   : false
+    enable_tools   : false
+    prefix         : /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/xros-arm64
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+[71/73] Compiling C object src/libdav1d.7.dylib.p/arm_64_mc16.S.o
+[72/73] Compiling C object src/libdav1d.7.dylib.p/decode.c.o
+[73/73] Linking target src/libdav1d.7.dylib
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-src/include/dav1d/version.h to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/xros-arm64/include/dav1d
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/xros-arm64/meson-private/dav1d.pc to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/xros-arm64/lib/pkgconfig
+Installing symlink pointing to libdav1d.7.dylib to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/xros-arm64/lib/libdav1d.dylib
+✓ dav1d xros-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/xros-arm64
+
+━━━ Building dav1d: xrsimulator-arm64 (arm64 for xrsimulator) ━━━
+    enable_tests   : false
+    enable_tools   : false
+    prefix         : /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/xrsimulator-arm64
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+[71/73] Compiling C object src/libdav1d.7.dylib.p/arm_64_mc16.S.o
+[72/73] Compiling C object src/libdav1d.7.dylib.p/decode.c.o
+[73/73] Linking target src/libdav1d.7.dylib
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-src/include/dav1d/version.h to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/xrsimulator-arm64/include/dav1d
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/xrsimulator-arm64/meson-private/dav1d.pc to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/xrsimulator-arm64/lib/pkgconfig
+Installing symlink pointing to libdav1d.7.dylib to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/xrsimulator-arm64/lib/libdav1d.dylib
+✓ dav1d xrsimulator-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/xrsimulator-arm64
+
+━━━ Building dav1d: macos-arm64 (arm64 for macosx) ━━━
+    enable_tests   : false
+    enable_tools   : false
+    prefix         : /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/macos-arm64
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+[71/73] Compiling C object src/libdav1d.7.dylib.p/arm_64_mc16.S.o
+[72/73] Compiling C object src/libdav1d.7.dylib.p/decode.c.o
+[73/73] Linking target src/libdav1d.7.dylib
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-src/include/dav1d/version.h to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/macos-arm64/include/dav1d
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/macos-arm64/meson-private/dav1d.pc to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/macos-arm64/lib/pkgconfig
+Installing symlink pointing to libdav1d.7.dylib to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/macos-arm64/lib/libdav1d.dylib
+✓ dav1d macos-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/macos-arm64
+
+━━━ Building dav1d: macos-x86_64 (x86_64 for macosx) ━━━
+    enable_tests   : false
+    enable_tools   : false
+    prefix         : /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/macos-x86_64
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ld: warning: no platform load command found in '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/macos-x86_64/src/libdav1d.7.dylib.p/loopfilter16_sse.obj', assuming: macOS
+ld: warning: no platform load command found in '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/macos-x86_64/src/libdav1d.7.dylib.p/looprestoration16_sse.obj', assuming: macOS
+ld: warning: no platform load command found in '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/macos-x86_64/src/libdav1d.7.dylib.p/mc16_sse.obj', assuming: macOS
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-src/include/dav1d/version.h to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/macos-x86_64/include/dav1d
+Installing /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-work/macos-x86_64/meson-private/dav1d.pc to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/macos-x86_64/lib/pkgconfig
+Installing symlink pointing to libdav1d.7.dylib to /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/macos-x86_64/lib/libdav1d.dylib
+✓ dav1d macos-x86_64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/dav1d-thin/macos-x86_64
+
+━━━ Building zimg: ios-arm64 (arm64 for iphoneos) ━━━
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating zimg.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+  CXXLD    libneon.la
+  CXXLD    libzimg_internal.la
+  CXXLD    libzimg.la
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg.h /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg++.hpp '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/ios-arm64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/ios-arm64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zimg.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/ios-arm64/lib/pkgconfig'
+✓ zimg ios-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/ios-arm64
+
+━━━ Building zimg: isimulator-arm64 (arm64 for iphonesimulator) ━━━
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating zimg.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+  CXXLD    libneon.la
+  CXXLD    libzimg_internal.la
+  CXXLD    libzimg.la
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg.h /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg++.hpp '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/isimulator-arm64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/isimulator-arm64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zimg.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/isimulator-arm64/lib/pkgconfig'
+✓ zimg isimulator-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/isimulator-arm64
+
+━━━ Building zimg: isimulator-x86_64 (x86_64 for iphonesimulator) ━━━
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating zimg.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+  CXXLD    libavx2.la
+  CXXLD    libzimg_internal.la
+  CXXLD    libzimg.la
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg.h /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg++.hpp '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/isimulator-x86_64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/isimulator-x86_64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zimg.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/isimulator-x86_64/lib/pkgconfig'
+✓ zimg isimulator-x86_64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/isimulator-x86_64
+
+━━━ Building zimg: tvos-arm64 (arm64 for appletvos) ━━━
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating zimg.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+  CXXLD    libneon.la
+  CXXLD    libzimg_internal.la
+  CXXLD    libzimg.la
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg.h /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg++.hpp '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/tvos-arm64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/tvos-arm64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zimg.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/tvos-arm64/lib/pkgconfig'
+✓ zimg tvos-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/tvos-arm64
+
+━━━ Building zimg: tvsimulator-arm64 (arm64 for appletvsimulator) ━━━
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating zimg.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+  CXXLD    libneon.la
+  CXXLD    libzimg_internal.la
+  CXXLD    libzimg.la
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg.h /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg++.hpp '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/tvsimulator-arm64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/tvsimulator-arm64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zimg.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/tvsimulator-arm64/lib/pkgconfig'
+✓ zimg tvsimulator-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/tvsimulator-arm64
+
+━━━ Building zimg: tvsimulator-x86_64 (x86_64 for appletvsimulator) ━━━
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating zimg.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+  CXXLD    libavx2.la
+  CXXLD    libzimg_internal.la
+  CXXLD    libzimg.la
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg.h /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg++.hpp '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/tvsimulator-x86_64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/tvsimulator-x86_64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zimg.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/tvsimulator-x86_64/lib/pkgconfig'
+✓ zimg tvsimulator-x86_64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/tvsimulator-x86_64
+
+━━━ Building zimg: xros-arm64 (arm64 for xros) ━━━
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating zimg.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+  CXXLD    libneon.la
+  CXXLD    libzimg_internal.la
+  CXXLD    libzimg.la
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg.h /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg++.hpp '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/xros-arm64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/xros-arm64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zimg.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/xros-arm64/lib/pkgconfig'
+✓ zimg xros-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/xros-arm64
+
+━━━ Building zimg: xrsimulator-arm64 (arm64 for xrsimulator) ━━━
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating zimg.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+  CXXLD    libneon.la
+  CXXLD    libzimg_internal.la
+  CXXLD    libzimg.la
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg.h /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg++.hpp '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/xrsimulator-arm64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/xrsimulator-arm64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zimg.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/xrsimulator-arm64/lib/pkgconfig'
+✓ zimg xrsimulator-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/xrsimulator-arm64
+
+━━━ Building zimg: macos-arm64 (arm64 for macosx) ━━━
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating zimg.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+  CXXLD    libneon.la
+  CXXLD    libzimg_internal.la
+  CXXLD    libzimg.la
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg.h /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg++.hpp '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/macos-arm64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/macos-arm64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zimg.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/macos-arm64/lib/pkgconfig'
+✓ zimg macos-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/macos-arm64
+
+━━━ Building zimg: macos-x86_64 (x86_64 for macosx) ━━━
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating zimg.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+  CXXLD    libavx2.la
+  CXXLD    libzimg_internal.la
+  CXXLD    libzimg.la
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg.h /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-src/src/zimg/api/zimg++.hpp '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/macos-x86_64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/macos-x86_64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zimg.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/macos-x86_64/lib/pkgconfig'
+✓ zimg macos-x86_64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zimg-thin/macos-x86_64
+
+━━━ Building zvbi: ios-arm64 (arm64 for iphoneos) ━━━
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+ld: warning: -undefined dynamic_lookup is deprecated on iOS
+libtool: link: (cd ".libs" && rm -f "libzvbi.dylib" && ln -s "libzvbi.0.dylib" "libzvbi.dylib")
+libtool: link: ( cd ".libs" && rm -f "libzvbi.la" && ln -s "../libzvbi.la" "libzvbi.la" )
+libtool: install: /usr/bin/install -c .libs/libzvbi.lai /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/ios-arm64/lib/libzvbi.la
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/ios-arm64/include'
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-src/src/libzvbi.h '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/ios-arm64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/ios-arm64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zvbi-0.2.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/ios-arm64/lib/pkgconfig'
+✓ zvbi ios-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/ios-arm64
+
+━━━ Building zvbi: isimulator-arm64 (arm64 for iphonesimulator) ━━━
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+ld: warning: -undefined dynamic_lookup is deprecated on iOS-simulator
+libtool: link: (cd ".libs" && rm -f "libzvbi.dylib" && ln -s "libzvbi.0.dylib" "libzvbi.dylib")
+libtool: link: ( cd ".libs" && rm -f "libzvbi.la" && ln -s "../libzvbi.la" "libzvbi.la" )
+libtool: install: /usr/bin/install -c .libs/libzvbi.lai /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/isimulator-arm64/lib/libzvbi.la
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/isimulator-arm64/include'
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-src/src/libzvbi.h '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/isimulator-arm64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/isimulator-arm64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zvbi-0.2.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/isimulator-arm64/lib/pkgconfig'
+✓ zvbi isimulator-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/isimulator-arm64
+
+━━━ Building zvbi: isimulator-x86_64 (x86_64 for iphonesimulator) ━━━
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+ld: warning: -undefined dynamic_lookup is deprecated on iOS-simulator
+libtool: link: (cd ".libs" && rm -f "libzvbi.dylib" && ln -s "libzvbi.0.dylib" "libzvbi.dylib")
+libtool: link: ( cd ".libs" && rm -f "libzvbi.la" && ln -s "../libzvbi.la" "libzvbi.la" )
+libtool: install: /usr/bin/install -c .libs/libzvbi.lai /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/isimulator-x86_64/lib/libzvbi.la
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/isimulator-x86_64/include'
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-src/src/libzvbi.h '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/isimulator-x86_64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/isimulator-x86_64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zvbi-0.2.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/isimulator-x86_64/lib/pkgconfig'
+✓ zvbi isimulator-x86_64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/isimulator-x86_64
+
+━━━ Building zvbi: tvos-arm64 (arm64 for appletvos) ━━━
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+ld: warning: -undefined dynamic_lookup is deprecated on tvOS
+libtool: link: (cd ".libs" && rm -f "libzvbi.dylib" && ln -s "libzvbi.0.dylib" "libzvbi.dylib")
+libtool: link: ( cd ".libs" && rm -f "libzvbi.la" && ln -s "../libzvbi.la" "libzvbi.la" )
+libtool: install: /usr/bin/install -c .libs/libzvbi.lai /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvos-arm64/lib/libzvbi.la
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvos-arm64/include'
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-src/src/libzvbi.h '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvos-arm64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvos-arm64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zvbi-0.2.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvos-arm64/lib/pkgconfig'
+✓ zvbi tvos-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvos-arm64
+
+━━━ Building zvbi: tvsimulator-arm64 (arm64 for appletvsimulator) ━━━
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+ld: warning: -undefined dynamic_lookup is deprecated on tvOS-simulator
+libtool: link: (cd ".libs" && rm -f "libzvbi.dylib" && ln -s "libzvbi.0.dylib" "libzvbi.dylib")
+libtool: link: ( cd ".libs" && rm -f "libzvbi.la" && ln -s "../libzvbi.la" "libzvbi.la" )
+libtool: install: /usr/bin/install -c .libs/libzvbi.lai /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvsimulator-arm64/lib/libzvbi.la
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvsimulator-arm64/include'
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-src/src/libzvbi.h '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvsimulator-arm64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvsimulator-arm64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zvbi-0.2.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvsimulator-arm64/lib/pkgconfig'
+✓ zvbi tvsimulator-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvsimulator-arm64
+
+━━━ Building zvbi: tvsimulator-x86_64 (x86_64 for appletvsimulator) ━━━
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+ld: warning: -undefined dynamic_lookup is deprecated on tvOS-simulator
+libtool: link: (cd ".libs" && rm -f "libzvbi.dylib" && ln -s "libzvbi.0.dylib" "libzvbi.dylib")
+libtool: link: ( cd ".libs" && rm -f "libzvbi.la" && ln -s "../libzvbi.la" "libzvbi.la" )
+libtool: install: /usr/bin/install -c .libs/libzvbi.lai /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvsimulator-x86_64/lib/libzvbi.la
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvsimulator-x86_64/include'
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-src/src/libzvbi.h '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvsimulator-x86_64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvsimulator-x86_64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zvbi-0.2.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvsimulator-x86_64/lib/pkgconfig'
+✓ zvbi tvsimulator-x86_64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/tvsimulator-x86_64
+
+━━━ Building zvbi: xros-arm64 (arm64 for xros) ━━━
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+ld: warning: -undefined dynamic_lookup is deprecated on visionOS
+libtool: link: (cd ".libs" && rm -f "libzvbi.dylib" && ln -s "libzvbi.0.dylib" "libzvbi.dylib")
+libtool: link: ( cd ".libs" && rm -f "libzvbi.la" && ln -s "../libzvbi.la" "libzvbi.la" )
+libtool: install: /usr/bin/install -c .libs/libzvbi.lai /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/xros-arm64/lib/libzvbi.la
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/xros-arm64/include'
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-src/src/libzvbi.h '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/xros-arm64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/xros-arm64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zvbi-0.2.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/xros-arm64/lib/pkgconfig'
+✓ zvbi xros-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/xros-arm64
+
+━━━ Building zvbi: xrsimulator-arm64 (arm64 for xrsimulator) ━━━
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+ld: warning: -undefined dynamic_lookup is deprecated on visionOS-simulator
+libtool: link: (cd ".libs" && rm -f "libzvbi.dylib" && ln -s "libzvbi.0.dylib" "libzvbi.dylib")
+libtool: link: ( cd ".libs" && rm -f "libzvbi.la" && ln -s "../libzvbi.la" "libzvbi.la" )
+libtool: install: /usr/bin/install -c .libs/libzvbi.lai /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/xrsimulator-arm64/lib/libzvbi.la
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/xrsimulator-arm64/include'
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-src/src/libzvbi.h '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/xrsimulator-arm64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/xrsimulator-arm64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zvbi-0.2.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/xrsimulator-arm64/lib/pkgconfig'
+✓ zvbi xrsimulator-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/xrsimulator-arm64
+
+━━━ Building zvbi: macos-arm64 (arm64 for macosx) ━━━
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+libtool: link: clang -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -target arm64-apple-macos14.0 -fno-common -fgnu89-inline -gline-tables-only -std=gnu23 -dynamiclib -Wl,-undefined -Wl,dynamic_lookup -Wl,-no_fixup_chains -o .libs/libzvbi.0.dylib  .libs/bit_slicer.o .libs/cache.o .libs/caption.o .libs/cc608_decoder.o .libs/conv.o .libs/dvb_mux.o .libs/dvb_demux.o .libs/event.o .libs/exp-html.o .libs/exp-templ.o .libs/exp-txt.o .libs/export.o .libs/hamm.o .libs/idl_demux.o .libs/inout.o .libs/io-bktr.o .libs/io-dvb.o .libs/io-sim.o .libs/io-v4l.o .libs/io-v4l2.o .libs/io-v4l2k.o .libs/lang.o .libs/misc.o .libs/packet.o .libs/teletext.o .libs/packet-830-stub.o .libs/page_table.o .libs/pfc_demux.o .libs/proxy-client.o .libs/raw_decoder.o .libs/sampling_par.o .libs/search.o .libs/ure.o .libs/sliced_filter.o .libs/tables.o .libs/trigger.o .libs/vbi.o .libs/vps.o .libs/wss.o .libs/xds_demux.o   -Wl,-force_load,./.libs/libzvbiinline.a  -lpthread -lm -liconv  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -gline-tables-only -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -gline-tables-only -Wl,-headerpad_max_install_names   -install_name  /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/macos-arm64/lib/libzvbi.0.dylib -compatibility_version 14 -current_version 14.2 
+libtool: link: (cd ".libs" && rm -f "libzvbi.dylib" && ln -s "libzvbi.0.dylib" "libzvbi.dylib")
+libtool: link: ( cd ".libs" && rm -f "libzvbi.la" && ln -s "../libzvbi.la" "libzvbi.la" )
+libtool: install: /usr/bin/install -c .libs/libzvbi.lai /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/macos-arm64/lib/libzvbi.la
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/macos-arm64/include'
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-src/src/libzvbi.h '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/macos-arm64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/macos-arm64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zvbi-0.2.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/macos-arm64/lib/pkgconfig'
+✓ zvbi macos-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/macos-arm64
+
+━━━ Building zvbi: macos-x86_64 (x86_64 for macosx) ━━━
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+libtool: link: clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -target x86_64-apple-macos14.0 -fno-common -fgnu89-inline -gline-tables-only -std=gnu23 -dynamiclib -Wl,-undefined -Wl,dynamic_lookup -Wl,-no_fixup_chains -o .libs/libzvbi.0.dylib  .libs/bit_slicer.o .libs/cache.o .libs/caption.o .libs/cc608_decoder.o .libs/conv.o .libs/dvb_mux.o .libs/dvb_demux.o .libs/event.o .libs/exp-html.o .libs/exp-templ.o .libs/exp-txt.o .libs/export.o .libs/hamm.o .libs/idl_demux.o .libs/inout.o .libs/io-bktr.o .libs/io-dvb.o .libs/io-sim.o .libs/io-v4l.o .libs/io-v4l2.o .libs/io-v4l2k.o .libs/lang.o .libs/misc.o .libs/packet.o .libs/teletext.o .libs/packet-830-stub.o .libs/page_table.o .libs/pfc_demux.o .libs/proxy-client.o .libs/raw_decoder.o .libs/sampling_par.o .libs/search.o .libs/ure.o .libs/sliced_filter.o .libs/tables.o .libs/trigger.o .libs/vbi.o .libs/vps.o .libs/wss.o .libs/xds_demux.o   -Wl,-force_load,./.libs/libzvbiinline.a  -lpthread -lm -liconv  -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -gline-tables-only -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -gline-tables-only -Wl,-headerpad_max_install_names   -install_name  /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/macos-x86_64/lib/libzvbi.0.dylib -compatibility_version 14 -current_version 14.2 
+libtool: link: (cd ".libs" && rm -f "libzvbi.dylib" && ln -s "libzvbi.0.dylib" "libzvbi.dylib")
+libtool: link: ( cd ".libs" && rm -f "libzvbi.la" && ln -s "../libzvbi.la" "libzvbi.la" )
+libtool: install: /usr/bin/install -c .libs/libzvbi.lai /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/macos-x86_64/lib/libzvbi.la
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/macos-x86_64/include'
+ /usr/bin/install -c -m 644 /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-src/src/libzvbi.h '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/macos-x86_64/include'
+ mkdir -p '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/macos-x86_64/lib/pkgconfig'
+ /usr/bin/install -c -m 644 zvbi-0.2.pc '/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/macos-x86_64/lib/pkgconfig'
+✓ zvbi macos-x86_64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/zvbi-thin/macos-x86_64
+
+━━━ Building FFmpeg: ios-arm64 (arm64 for iphoneos) ━━━
+
+WARNING: Option --enable-filter=buffer did not match anything
+WARNING: Option --enable-filter=buffersink did not match anything
+WARNING: Option --enable-filter=abuffer did not match anything
+WARNING: Option --enable-filter=abuffersink did not match anything
+LD	libavformat/libavformat.62.dylib
+ld: warning: -single_module is obsolete
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib libavfilter/metal/vf_yadif_videotoolbox.metallib.c
+INSTALL	libavutil/ffversion.h
+INSTALL	libavutil/libavutil.pc
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib
+✓ FFmpeg ios-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/thin/ios-arm64
+
+━━━ Building FFmpeg: isimulator-arm64 (arm64 for iphonesimulator) ━━━
+
+WARNING: Option --enable-filter=buffer did not match anything
+WARNING: Option --enable-filter=buffersink did not match anything
+WARNING: Option --enable-filter=abuffer did not match anything
+WARNING: Option --enable-filter=abuffersink did not match anything
+LD	libavformat/libavformat.62.dylib
+ld: warning: -single_module is obsolete
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib libavfilter/metal/vf_yadif_videotoolbox.metallib.c
+INSTALL	libavutil/ffversion.h
+INSTALL	libavutil/libavutil.pc
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib
+✓ FFmpeg isimulator-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/thin/isimulator-arm64
+
+━━━ Building FFmpeg: isimulator-x86_64 (x86_64 for iphonesimulator) ━━━
+
+WARNING: Option --enable-filter=buffer did not match anything
+WARNING: Option --enable-filter=buffersink did not match anything
+WARNING: Option --enable-filter=abuffer did not match anything
+WARNING: Option --enable-filter=abuffersink did not match anything
+LD	libavformat/libavformat.62.dylib
+ld: warning: -single_module is obsolete
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib libavfilter/metal/vf_yadif_videotoolbox.metallib.c
+INSTALL	libavutil/ffversion.h
+INSTALL	libavutil/libavutil.pc
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib
+✓ FFmpeg isimulator-x86_64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/thin/isimulator-x86_64
+
+━━━ Building FFmpeg: tvos-arm64 (arm64 for appletvos) ━━━
+
+WARNING: Option --enable-filter=buffer did not match anything
+WARNING: Option --enable-filter=buffersink did not match anything
+WARNING: Option --enable-filter=abuffer did not match anything
+WARNING: Option --enable-filter=abuffersink did not match anything
+LD	libavformat/libavformat.62.dylib
+ld: warning: -single_module is obsolete
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib libavfilter/metal/vf_yadif_videotoolbox.metallib.c
+INSTALL	libavutil/ffversion.h
+INSTALL	libavutil/libavutil.pc
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib
+✓ FFmpeg tvos-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/thin/tvos-arm64
+
+━━━ Building FFmpeg: tvsimulator-arm64 (arm64 for appletvsimulator) ━━━
+
+WARNING: Option --enable-filter=buffer did not match anything
+WARNING: Option --enable-filter=buffersink did not match anything
+WARNING: Option --enable-filter=abuffer did not match anything
+WARNING: Option --enable-filter=abuffersink did not match anything
+LD	libavformat/libavformat.62.dylib
+ld: warning: -single_module is obsolete
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib libavfilter/metal/vf_yadif_videotoolbox.metallib.c
+INSTALL	libavutil/ffversion.h
+INSTALL	libavutil/libavutil.pc
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib
+✓ FFmpeg tvsimulator-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/thin/tvsimulator-arm64
+
+━━━ Building FFmpeg: tvsimulator-x86_64 (x86_64 for appletvsimulator) ━━━
+
+WARNING: Option --enable-filter=buffer did not match anything
+WARNING: Option --enable-filter=buffersink did not match anything
+WARNING: Option --enable-filter=abuffer did not match anything
+WARNING: Option --enable-filter=abuffersink did not match anything
+LD	libavformat/libavformat.62.dylib
+ld: warning: -single_module is obsolete
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib libavfilter/metal/vf_yadif_videotoolbox.metallib.c
+INSTALL	libavutil/ffversion.h
+INSTALL	libavutil/libavutil.pc
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib
+✓ FFmpeg tvsimulator-x86_64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/thin/tvsimulator-x86_64
+
+━━━ Building FFmpeg: xros-arm64 (arm64 for xros) ━━━
+
+WARNING: Option --enable-filter=buffer did not match anything
+WARNING: Option --enable-filter=buffersink did not match anything
+WARNING: Option --enable-filter=abuffer did not match anything
+WARNING: Option --enable-filter=abuffersink did not match anything
+LD	libavformat/libavformat.62.dylib
+ld: warning: -single_module is obsolete
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib libavfilter/metal/vf_yadif_videotoolbox.metallib.c
+INSTALL	libavutil/ffversion.h
+INSTALL	libavutil/libavutil.pc
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib
+✓ FFmpeg xros-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/thin/xros-arm64
+
+━━━ Building FFmpeg: xrsimulator-arm64 (arm64 for xrsimulator) ━━━
+
+WARNING: Option --enable-filter=buffer did not match anything
+WARNING: Option --enable-filter=buffersink did not match anything
+WARNING: Option --enable-filter=abuffer did not match anything
+WARNING: Option --enable-filter=abuffersink did not match anything
+LD	libavformat/libavformat.62.dylib
+ld: warning: -single_module is obsolete
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib libavfilter/metal/vf_yadif_videotoolbox.metallib.c
+INSTALL	libavutil/ffversion.h
+INSTALL	libavutil/libavutil.pc
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib
+✓ FFmpeg xrsimulator-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/thin/xrsimulator-arm64
+
+━━━ Building FFmpeg: macos-arm64 (arm64 for macosx) ━━━
+
+WARNING: Option --enable-filter=buffer did not match anything
+WARNING: Option --enable-filter=buffersink did not match anything
+WARNING: Option --enable-filter=abuffer did not match anything
+WARNING: Option --enable-filter=abuffersink did not match anything
+LD	libavformat/libavformat.62.dylib
+ld: warning: -single_module is obsolete
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib libavfilter/metal/vf_yadif_videotoolbox.metallib.c
+INSTALL	libavutil/ffversion.h
+INSTALL	libavutil/libavutil.pc
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib
+✓ FFmpeg macos-arm64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/thin/macos-arm64
+
+━━━ Building FFmpeg: macos-x86_64 (x86_64 for macosx) ━━━
+
+WARNING: Option --enable-filter=buffer did not match anything
+WARNING: Option --enable-filter=buffersink did not match anything
+WARNING: Option --enable-filter=abuffer did not match anything
+WARNING: Option --enable-filter=abuffersink did not match anything
+LD	libavformat/libavformat.62.dylib
+ld: warning: -single_module is obsolete
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib libavfilter/metal/vf_yadif_videotoolbox.metallib.c
+INSTALL	libavutil/ffversion.h
+INSTALL	libavutil/libavutil.pc
+rm libavfilter/metal/vf_yadif_videotoolbox.metal.air libavfilter/metal/vf_yadif_videotoolbox.metallib
+✓ FFmpeg macos-x86_64 → /Users/adamzumla/Documents/FFmpegBuild-rtsp/build/thin/macos-x86_64
+
+━━━ Creating XCFrameworks ━━━
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/isimulator/AetherLibavcodec.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/tvsimulator/AetherLibavcodec.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/xrsimulator/AetherLibavcodec.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/macos/AetherLibavcodec.framework: replacing existing signature
+  → AetherLibavcodec.xcframework
+xcframework successfully written out to: /Users/adamzumla/Documents/FFmpegBuild-rtsp/Sources/AetherLibavcodec.xcframework
+  ✓ AetherLibavcodec.xcframework
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/isimulator/AetherLibavformat.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/tvsimulator/AetherLibavformat.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/xrsimulator/AetherLibavformat.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/macos/AetherLibavformat.framework: replacing existing signature
+  → AetherLibavformat.xcframework
+xcframework successfully written out to: /Users/adamzumla/Documents/FFmpegBuild-rtsp/Sources/AetherLibavformat.xcframework
+  ✓ AetherLibavformat.xcframework
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/isimulator/AetherLibavutil.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/tvsimulator/AetherLibavutil.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/xrsimulator/AetherLibavutil.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/macos/AetherLibavutil.framework: replacing existing signature
+  → AetherLibavutil.xcframework
+xcframework successfully written out to: /Users/adamzumla/Documents/FFmpegBuild-rtsp/Sources/AetherLibavutil.xcframework
+  ✓ AetherLibavutil.xcframework
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/isimulator/AetherLibswresample.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/tvsimulator/AetherLibswresample.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/xrsimulator/AetherLibswresample.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/macos/AetherLibswresample.framework: replacing existing signature
+  → AetherLibswresample.xcframework
+xcframework successfully written out to: /Users/adamzumla/Documents/FFmpegBuild-rtsp/Sources/AetherLibswresample.xcframework
+  ✓ AetherLibswresample.xcframework
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/isimulator/AetherLibswscale.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/tvsimulator/AetherLibswscale.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/xrsimulator/AetherLibswscale.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/macos/AetherLibswscale.framework: replacing existing signature
+  → AetherLibswscale.xcframework
+xcframework successfully written out to: /Users/adamzumla/Documents/FFmpegBuild-rtsp/Sources/AetherLibswscale.xcframework
+  ✓ AetherLibswscale.xcframework
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/isimulator/AetherLibavfilter.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/tvsimulator/AetherLibavfilter.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/xrsimulator/AetherLibavfilter.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/macos/AetherLibavfilter.framework: replacing existing signature
+  → AetherLibavfilter.xcframework
+xcframework successfully written out to: /Users/adamzumla/Documents/FFmpegBuild-rtsp/Sources/AetherLibavfilter.xcframework
+  ✓ AetherLibavfilter.xcframework
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/isimulator/AetherLibdav1d.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/tvsimulator/AetherLibdav1d.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/xrsimulator/AetherLibdav1d.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/macos/AetherLibdav1d.framework: replacing existing signature
+  → AetherLibdav1d.xcframework
+xcframework successfully written out to: /Users/adamzumla/Documents/FFmpegBuild-rtsp/Sources/AetherLibdav1d.xcframework
+  ✓ AetherLibdav1d.xcframework
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/isimulator/AetherLibzimg.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/tvsimulator/AetherLibzimg.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/xrsimulator/AetherLibzimg.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/macos/AetherLibzimg.framework: replacing existing signature
+  → AetherLibzimg.xcframework
+xcframework successfully written out to: /Users/adamzumla/Documents/FFmpegBuild-rtsp/Sources/AetherLibzimg.xcframework
+  ✓ AetherLibzimg.xcframework
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/isimulator/AetherLibzvbi.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/tvsimulator/AetherLibzvbi.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/xrsimulator/AetherLibzvbi.framework: replacing existing signature
+/Users/adamzumla/Documents/FFmpegBuild-rtsp/build/frameworks/macos/AetherLibzvbi.framework: replacing existing signature
+  → AetherLibzvbi.xcframework
+xcframework successfully written out to: /Users/adamzumla/Documents/FFmpegBuild-rtsp/Sources/AetherLibzvbi.xcframework
+  ✓ AetherLibzvbi.xcframework
+✓ Build record written to BUILD-INFO.txt
+
+╔══════════════════════════════════════╗
+║  ✓ Build complete!                   ║
+╚══════════════════════════════════════╝
+
+Sizes:
+   88M  AetherLibavcodec.xcframework
+  7.0M  AetherLibavfilter.xcframework
+   20M  AetherLibavformat.xcframework
+   16M  AetherLibavutil.xcframework
+   14M  AetherLibdav1d.xcframework
+  2.0M  AetherLibswresample.xcframework
+   15M  AetherLibswscale.xcframework
+  8.2M  AetherLibzimg.xcframework
+  6.5M  AetherLibzvbi.xcframework

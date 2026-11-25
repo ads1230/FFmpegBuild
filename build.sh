@@ -582,7 +582,7 @@ COMMON_FLAGS=(
     --disable-devices --disable-outdevs --disable-indevs
     --disable-avdevice --enable-avfilter
     --enable-swscale --disable-encoders --disable-muxers
-    --disable-bsfs --disable-network --disable-protocols
+    --disable-bsfs --enable-network --disable-protocols
     --disable-d3d11va --disable-dxva2 --disable-vaapi --disable-vdpau
     --disable-gray --disable-iconv --disable-bzlib
     --disable-linux-perf --disable-symver --disable-swscale-alpha
@@ -631,6 +631,11 @@ COMMON_FLAGS=(
     --enable-videotoolbox --enable-audiotoolbox
     --enable-libdav1d
     --enable-protocol=file --enable-protocol=pipe --enable-protocol=data
+    # reDiffusion: RTSP/RTP for SAT>IP servers and IP sources (rtsp://, satip://). The
+    # rtsp demuxer runs the session itself (DESCRIBE/SETUP/PLAY over tcp, media over
+    # udp or interleaved tcp), rtp depacketises (MPEG-TS payloads go to the mpegts
+    # demuxer), sdp/rtp demuxers read session descriptions. http stays host-side.
+    --enable-protocol=tcp --enable-protocol=udp --enable-protocol=rtp
     # concat is deliberately NOT enabled. It is a script demuxer: a file beginning with
     # "ffconcat version 1.0" makes libavformat open the paths listed inside it through the
     # file protocol. Nothing here asks for it by name, so probing was the only way to reach
@@ -642,6 +647,7 @@ COMMON_FLAGS=(
     # and the flag silently did nothing. Asking for it again without libxml2 would only
     # restore that false impression. DASH content still arrives through mov/mpegts segments.
     --enable-demuxer=hls --enable-demuxer=matroska
+    --enable-demuxer=rtsp --enable-demuxer=sdp --enable-demuxer=rtp
     --enable-demuxer=mov --enable-demuxer=mpegts --enable-demuxer=mpegps
     --enable-demuxer=avi --enable-demuxer=flv --enable-demuxer=h264
     # asf: native .wmv / .asf. Enabled together with the whole WMA decoder family
