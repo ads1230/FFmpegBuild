@@ -327,6 +327,25 @@ s#(    if \(!\(rt->rtsp_flags \& RTSP_FLAG_LISTEN\)\)\n)(        ff_rtsp_send_cm
     fi
 }
 
+patch_ffmpeg_rtsp_rx_buffer() {
+    # reDiffusion: RTP arrives over UDP (SAT>IP servers such as the Netstream refuse RTP over
+    # TCP, 461). FFmpeg's 384 KiB default receive buffer overflowed during short read stalls on
+    # iPhone/iPad ("RTP: missed 469 packets", PES size mismatch, green corrupted frames). The
+    # RTSP demuxer's sockets default to 4 MiB unless buffer_size is set.
+    local F="${FFMPEG_SRC}/libavformat/rtsp.c"
+    if grep -q "reDiffusion: 4 MiB" "${F}"; then
+        return
+    fi
+    echo "→ Patching FFmpeg: 4 MiB RTP receive buffer by default (reDiffusion SAT>IP)"
+    perl -0777 -pi -e '
+s#    av_dict_set_int\(\&opts, "buffer_size", rt->buffer_size, 0\);\n#    /* reDiffusion: 4 MiB receive buffer by default; 384 KiB overflowed on short read stalls. */\n    av_dict_set_int(\&opts, "buffer_size", rt->buffer_size > 0 ? rt->buffer_size : 4 * 1024 * 1024, 0);\n#;
+' "${F}"
+    if ! grep -q "reDiffusion: 4 MiB" "${F}"; then
+        echo "ERROR: RTSP receive buffer patch did not apply (upstream source changed?)"
+        exit 1
+    fi
+}
+
 fetch_dav1d() {
     discard_stale_source "${DAV1D_SRC}" "${DAV1D_VERSION}"
     if [[ -d "${DAV1D_SRC}" ]]; then
@@ -1643,6 +1662,7 @@ patch_ffmpeg_matroska_tts
 patch_ffmpeg_vc1_parser
 patch_ffmpeg_dav1_tag
 patch_ffmpeg_rtsp_teardown
+patch_ffmpeg_rtsp_rx_buffer
 patch_ffmpeg_mpegts_mpeg1_probe
 patch_ffmpeg_eac3_dec3
 patch_ffmpeg_movenc_fragment_end
