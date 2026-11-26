@@ -308,6 +308,25 @@ s#(\{ AV_CODEC_ID_AV1,             MKTAG\('"'"'a'"'"', '"'"'v'"'"', '"'"'0'"'"',
     fi
 }
 
+patch_ffmpeg_rtsp_teardown() {
+    # reDiffusion: an RTSP/SAT>IP input closed after its interrupt callback fired (AetherEngine
+    # requests close, then avformat_close_input) aborted rtsp_read_close's TEARDOWN in the write
+    # loop, so the server kept the session — and a single-tuner SAT>IP server refused every next
+    # channel (503) until its session timeout. The TEARDOWN is sent with the interrupt cleared.
+    local F="${FFMPEG_SRC}/libavformat/rtspdec.c"
+    if grep -q "reDiffusion: TEARDOWN" "${F}"; then
+        return
+    fi
+    echo "→ Patching FFmpeg: RTSP TEARDOWN survives an interrupted close (reDiffusion SAT>IP)"
+    perl -0777 -pi -e '
+s#(    if \(!\(rt->rtsp_flags \& RTSP_FLAG_LISTEN\)\)\n)(        ff_rtsp_send_cmd_async\(s, "TEARDOWN", rt->control_uri, NULL\);\n)#    if (!(rt->rtsp_flags \& RTSP_FLAG_LISTEN)) {\n        /* reDiffusion: TEARDOWN is sent even after the caller interrupted reads, or the\n         * server keeps the session (and its tuner) until timeout. */\n        if (rt->rtsp_hd_out)\n            rt->rtsp_hd_out->interrupt_callback = (AVIOInterruptCB){ NULL, NULL };\n$2    }\n#;
+' "${F}"
+    if ! grep -q "reDiffusion: TEARDOWN" "${F}"; then
+        echo "ERROR: RTSP TEARDOWN patch did not apply (upstream source changed?)"
+        exit 1
+    fi
+}
+
 fetch_dav1d() {
     discard_stale_source "${DAV1D_SRC}" "${DAV1D_VERSION}"
     if [[ -d "${DAV1D_SRC}" ]]; then
@@ -1623,6 +1642,7 @@ patch_ffmpeg_visionos
 patch_ffmpeg_matroska_tts
 patch_ffmpeg_vc1_parser
 patch_ffmpeg_dav1_tag
+patch_ffmpeg_rtsp_teardown
 patch_ffmpeg_mpegts_mpeg1_probe
 patch_ffmpeg_eac3_dec3
 patch_ffmpeg_movenc_fragment_end
